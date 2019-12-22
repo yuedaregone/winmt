@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{ad7a6dd8-167d-4826-846e-c9f4ad564b3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MTouch">
+      <UniqueIdentifier>{aa3a81ef-c911-403f-bbcc-2659a01fc767}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MTool">
+      <UniqueIdentifier>{1021a6f9-3fcb-4613-bb8c-b84ca428487f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\External">
+      <UniqueIdentifier>{4d907c46-1d18-48a3-bb03-9d15bee6aac0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MLuaHelper">
+      <UniqueIdentifier>{8f4b943d-f936-4b44-904f-73c7dca5c677}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MImg">
+      <UniqueIdentifier>{26a298bd-1bd6-4fce-b1bc-7027aed1d325}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\LuaExtend">
+      <UniqueIdentifier>{8a698f81-4e36-4ae9-8910-431a4b1c2610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MNet">
+      <UniqueIdentifier>{01991673-c369-49dd-bb0d-3f19d5ddd112}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MNet\MSocket">
+      <UniqueIdentifier>{9be15065-5eca-4722-b1b2-ad9e4175200d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MNet\MHttp">
+      <UniqueIdentifier>{542dc6aa-883d-42bc-8a7a-bc23b2cccf90}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\MApplication.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MWindow.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MTouch\MTouchControl.cpp">
+      <Filter>src\MTouch</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MTime.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MLuaHelper\MTimeLuaWrap.cpp">
+      <Filter>src\MLuaHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MLuaHelper\MKeyboardWrap.cpp">
+      <Filter>src\MLuaHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MLuaHelper\MWindowWrap.cpp">
+      <Filter>src\MLuaHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MLuaHelper\MLayerWrap.cpp">
+      <Filter>src\MLuaHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MTool\MSharp.cpp">
+      <Filter>src\MTool</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LuaExtend\luaextend.cpp">
+      <Filter>src\LuaExtend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MLuaHelper\MLuaEngine.cpp">
+      <Filter>src\MLuaHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MTool\SimpleHeap.cpp">
+      <Filter>src\MTool</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MNet\MSocket\MNetApi.cpp">
+      <Filter>src\MNet\MSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MNet\MSocket\MNetClient.cpp">
+      <Filter>src\MNet\MSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MNet\MSocket\MNetServer.cpp">
+      <Filter>src\MNet\MSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MNet\MSocket\MSocket.cpp">
+      <Filter>src\MNet\MSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MNet\MSocket\MSocketIO.cpp">
+      <Filter>src\MNet\MSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MNet\MHttp\MHttpClient.cpp">
+      <Filter>src\MNet\MHttp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MNet\MHttp\MHttpRequest.cpp">
+      <Filter>src\MNet\MHttp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MNet\MHttp\MHttpResponse.cpp">
+      <Filter>src\MNet\MHttp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MTimer\MTimerManager.cpp" />
+    <ClCompile Include="src\MNet\MSocket\MSSLSocket.cpp" />
+    <ClCompile Include="src\MDraw\MSprite.cpp" />
+    <ClCompile Include="src\MDraw\MTextureManager.cpp" />
+    <ClCompile Include="src\MImg\MBuiltInImg.cpp" />
+    <ClCompile Include="src\MLayer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\MGLLayer.cpp" />
+    <ClCompile Include="src\MDraw\MLabel.cpp" />
+    <ClCompile Include="src\MTool\MUTF8.cpp" />
+    <ClCompile Include="src\MLuaHelper\MNetHttpWrap.cpp" />
+    <ClCompile Include="src\MLuaHelper\MLabelWrap.cpp" />
+    <ClCompile Include="src\MLuaHelper\MSpriteWrap.cpp" />
+    <ClCompile Include="src\External\pixelprocess.cpp" />
+    <ClCompile Include="src\MLuaHelper\MDrawProtocolWrap.cpp" />
+    <ClCompile Include="src\MLuaHelper\MComponentWrap.cpp" />
+    <ClCompile Include="src\MGL\shader.cpp" />
+    <ClCompile Include="src\External\stb_image.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\MApplication.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MWindow.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="src\MTouch\MTouchControl.h">
+      <Filter>src\MTouch</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MTouch\MTouchProtocol.h">
+      <Filter>src\MTouch</Filter>
+    </ClInclude>
+    <ClInclude Include="src\External\console.h">
+      <Filter>src\External</Filter>
+    </ClInclude>
+    <ClInclude Include="src\External\pixelprocess.h">
+      <Filter>src\External</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MTime.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MDefine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MLuaHelper\MLuaWrap.h">
+      <Filter>src\MLuaHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MKeyboardListen.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MImg\emt_hp.h">
+      <Filter>src\MImg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MImg\bg.h">
+      <Filter>src\MImg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MTool\MMath.h">
+      <Filter>src\MTool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MTool\MTool.h">
+      <Filter>src\MTool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LuaExtend\lextend.h">
+      <Filter>src\LuaExtend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MLuaHelper\MLuaEngine.h">
+      <Filter>src\MLuaHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MNet\MCycleBuffer.h">
+      <Filter>src\MNet</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MTool\MSingleton.h">
+      <Filter>src\MTool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MTool\SimpleHeap.h">
+      <Filter>src\MTool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MNet\MSocket\MNetApi.h">
+      <Filter>src\MNet\MSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MNet\MSocket\MNetClient.h">
+      <Filter>src\MNet\MSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MNet\MSocket\MNetDef.h">
+      <Filter>src\MNet\MSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MNet\MSocket\MNetServer.h">
+      <Filter>src\MNet\MSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MNet\MSocket\MSocket.h">
+      <Filter>src\MNet\MSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MNet\MSocket\MSocketIO.h">
+      <Filter>src\MNet\MSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MNet\MHttp\MHttpClient.h">
+      <Filter>src\MNet\MHttp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MNet\MHttp\MHttpRequest.h">
+      <Filter>src\MNet\MHttp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MNet\MHttp\MHttpResponse.h">
+      <Filter>src\MNet\MHttp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MNet\MByteBuffer.h">
+      <Filter>src\MNet</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MTimer\MTimer.h" />
+    <ClInclude Include="src\MTimer\MTimerManager.h" />
+    <ClInclude Include="src\MNet\MSocket\MSSLSocket.h" />
+    <ClInclude Include="src\MDraw\MSprite.h" />
+    <ClInclude Include="src\MDraw\MTexture.h" />
+    <ClInclude Include="src\MDraw\MTextureManager.h" />
+    <ClInclude Include="src\MImg\MBuiltInImg.h" />
+    <ClInclude Include="src\External\winfont.h" />
+    <ClInclude Include="src\MLayer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MGLLayer.h" />
+    <ClInclude Include="src\MDraw\MLabel.h" />
+    <ClInclude Include="src\MComponent\MComponent.h" />
+    <ClInclude Include="src\MDraw\MDrawProtocol.h" />
+    <ClInclude Include="src\MGL\shader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MT.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

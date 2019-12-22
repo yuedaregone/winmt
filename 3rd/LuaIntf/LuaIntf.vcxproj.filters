@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="LuaIntf\LuaCompat.h">
+      <Filter>LuaIntf</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaIntf\LuaContext.h">
+      <Filter>LuaIntf</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaIntf\LuaIntf.h">
+      <Filter>LuaIntf</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaIntf\LuaRef.h">
+      <Filter>LuaIntf</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaIntf\LuaState.h">
+      <Filter>LuaIntf</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaIntf\impl\CppArg.h">
+      <Filter>LuaIntf\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaIntf\impl\CppBindClass.h">
+      <Filter>LuaIntf\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaIntf\impl\CppBindModule.h">
+      <Filter>LuaIntf\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaIntf\impl\CppFunction.h">
+      <Filter>LuaIntf\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaIntf\impl\CppInvoke.h">
+      <Filter>LuaIntf\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaIntf\impl\CppObject.h">
+      <Filter>LuaIntf\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaIntf\impl\LuaException.h">
+      <Filter>LuaIntf\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaIntf\impl\LuaType.h">
+      <Filter>LuaIntf\impl</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="LuaIntf">
+      <UniqueIdentifier>{aca94d25-ff26-4e29-ac3b-f8bf56e755d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LuaIntf\impl">
+      <UniqueIdentifier>{9d99b27e-08b7-4389-a58a-467792e8cbe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LuaIntf\src">
+      <UniqueIdentifier>{c3a38146-507a-435c-ac13-c259780cb696}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LuaIntf\src\CppBindClass.cpp">
+      <Filter>LuaIntf\src</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaIntf\src\CppBindModule.cpp">
+      <Filter>LuaIntf\src</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaIntf\src\CppFunction.cpp">
+      <Filter>LuaIntf\src</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaIntf\src\CppObject.cpp">
+      <Filter>LuaIntf\src</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaIntf\src\LuaCompat.cpp">
+      <Filter>LuaIntf\src</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaIntf\src\LuaRef.cpp">
+      <Filter>LuaIntf\src</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaIntf\src\LuaState.cpp">
+      <Filter>LuaIntf\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

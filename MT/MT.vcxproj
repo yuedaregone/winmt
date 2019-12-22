@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\External\pixelprocess.cpp" />
+    <ClCompile Include="src\External\stb_image.cpp" />
+    <ClCompile Include="src\MDraw\MLabel.cpp" />
+    <ClCompile Include="src\MGLLayer.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\MGL\shader.cpp" />
+    <ClCompile Include="src\MLayer.cpp" />
+    <ClCompile Include="src\LuaExtend\luaextend.cpp" />
+    <ClCompile Include="src\MApplication.cpp" />
+    <ClCompile Include="src\MDraw\MSprite.cpp" />
+    <ClCompile Include="src\MDraw\MTextureManager.cpp" />
+    <ClCompile Include="src\MImg\MBuiltInImg.cpp" />
+    <ClCompile Include="src\MLuaHelper\MComponentWrap.cpp" />
+    <ClCompile Include="src\MLuaHelper\MDrawProtocolWrap.cpp" />
+    <ClCompile Include="src\MLuaHelper\MKeyboardWrap.cpp" />
+    <ClCompile Include="src\MLuaHelper\MLabelWrap.cpp" />
+    <ClCompile Include="src\MLuaHelper\MLayerWrap.cpp" />
+    <ClCompile Include="src\MLuaHelper\MLuaEngine.cpp" />
+    <ClCompile Include="src\MLuaHelper\MNetHttpWrap.cpp" />
+    <ClCompile Include="src\MLuaHelper\MSpriteWrap.cpp" />
+    <ClCompile Include="src\MLuaHelper\MTimeLuaWrap.cpp" />
+    <ClCompile Include="src\MLuaHelper\MWindowWrap.cpp" />
+    <ClCompile Include="src\MNet\MHttp\MHttpClient.cpp" />
+    <ClCompile Include="src\MNet\MHttp\MHttpRequest.cpp" />
+    <ClCompile Include="src\MNet\MHttp\MHttpResponse.cpp" />
+    <ClCompile Include="src\MNet\MSocket\MNetApi.cpp" />
+    <ClCompile Include="src\MNet\MSocket\MNetClient.cpp" />
+    <ClCompile Include="src\MNet\MSocket\MNetServer.cpp" />
+    <ClCompile Include="src\MNet\MSocket\MSocket.cpp" />
+    <ClCompile Include="src\MNet\MSocket\MSocketIO.cpp" />
+    <ClCompile Include="src\MNet\MSocket\MSSLSocket.cpp" />
+    <ClCompile Include="src\MTime.cpp" />
+    <ClCompile Include="src\MTimer\MTimerManager.cpp" />
+    <ClCompile Include="src\MTool\MSharp.cpp" />
+    <ClCompile Include="src\MTool\MUTF8.cpp" />
+    <ClCompile Include="src\MTool\SimpleHeap.cpp" />
+    <ClCompile Include="src\MTouch\MTouchControl.cpp" />
+    <ClCompile Include="src\MWindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\MComponent\MComponent.h" />
+    <ClInclude Include="src\MDraw\MDrawProtocol.h" />
+    <ClInclude Include="src\MDraw\MLabel.h" />
+    <ClInclude Include="src\MGLLayer.h" />
+    <ClInclude Include="src\MGL\shader.h" />
+    <ClInclude Include="src\MLayer.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="src\External\console.h" />
+    <ClInclude Include="src\External\pixelprocess.h" />
+    <ClInclude Include="src\External\winfont.h" />
+    <ClInclude Include="src\LuaExtend\lextend.h" />
+    <ClInclude Include="src\MApplication.h" />
+    <ClInclude Include="src\MDefine.h" />
+    <ClInclude Include="src\MDraw\MSprite.h" />
+    <ClInclude Include="src\MDraw\MTexture.h" />
+    <ClInclude Include="src\MDraw\MTextureManager.h" />
+    <ClInclude Include="src\MImg\bg.h" />
+    <ClInclude Include="src\MImg\emt_hp.h" />
+    <ClInclude Include="src\MImg\MBuiltInImg.h" />
+    <ClInclude Include="src\MKeyboardListen.h" />
+    <ClInclude Include="src\MLuaHelper\MLuaEngine.h" />
+    <ClInclude Include="src\MLuaHelper\MLuaWrap.h" />
+    <ClInclude Include="src\MNet\MByteBuffer.h" />
+    <ClInclude Include="src\MNet\MCycleBuffer.h" />
+    <ClInclude Include="src\MNet\MHttp\MHttpClient.h" />
+    <ClInclude Include="src\MNet\MHttp\MHttpRequest.h" />
+    <ClInclude Include="src\MNet\MHttp\MHttpResponse.h" />
+    <ClInclude Include="src\MNet\MSocket\MNetApi.h" />
+    <ClInclude Include="src\MNet\MSocket\MNetClient.h" />
+    <ClInclude Include="src\MNet\MSocket\MNetDef.h" />
+    <ClInclude Include="src\MNet\MSocket\MNetServer.h" />
+    <ClInclude Include="src\MNet\MSocket\MSocket.h" />
+    <ClInclude Include="src\MNet\MSocket\MSocketIO.h" />
+    <ClInclude Include="src\MNet\MSocket\MSSLSocket.h" />
+    <ClInclude Include="src\MTime.h" />
+    <ClInclude Include="src\MTimer\MTimer.h" />
+    <ClInclude Include="src\MTimer\MTimerManager.h" />
+    <ClInclude Include="src\MTool\MMath.h" />
+    <ClInclude Include="src\MTool\MSingleton.h" />
+    <ClInclude Include="src\MTool\MTool.h" />
+    <ClInclude Include="src\MTool\SimpleHeap.h" />
+    <ClInclude Include="src\MTouch\MTouchControl.h" />
+    <ClInclude Include="src\MTouch\MTouchProtocol.h" />
+    <ClInclude Include="src\MWindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MT.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{07E016F4-3CFA-4F74-9322-E5EA73C7DD7D}</ProjectGuid>
+    <RootNamespace>MT</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;.\src;.\src\MTouch;.\src\MImg;.\src\MLuaHelper;.\src\MDraw;.\src\MTool;.\src\LuaExtend;.\src\MTimer;.\src\MComponent;.\src\MGL;.\src\MNet;.\src\MNet\MSocket;.\src\MNet\MHttp;.\src\External;..\3rd\Lua5.3\src;..\3rd\openssl\include;..\3rd\GLEW2.1.0\include;..\3rd\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WIN32_LEAN_AND_MEAN;_DEBUG;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;VC_EXTRA_LEAN;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glew32sd.lib;opengl32.lib;Lua5.3.lib;wsock32.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Debug;..\3rd\openssl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>.\;.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>.\;.\src;.\src\MTouch;.\src\MImg;.\src\MLuaHelper;.\src\MDraw;.\src\MTool;.\src\LuaExtend;.\src\MTimer;.\src\MComponent;.\src\MGL;.\src\MNet;.\src\MNet\MSocket;.\src\MNet\MHttp;.\src\External;..\3rd\Lua5.3\src;..\3rd\openssl\include;..\3rd\GLEW2.1.0\include;..\3rd\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;VC_EXTRA_LEAN;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\Release;..\3rd\openssl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;opengl32.lib;Lua5.3.lib;wsock32.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
