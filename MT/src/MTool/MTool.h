@@ -12,6 +12,8 @@ extern "C" {
 	RECT GetRightTopRect(LONG w, LONG h);
 	RECT GetRightBottomRect(LONG w, LONG h);
 
+	uint32_t ConvertColor(unsigned char r, unsigned char g, unsigned char b, unsigned char a);
+
 
 	int unicode_len(const char chr);
 	int get_unicode(const char *str, int n);

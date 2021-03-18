@@ -52,6 +52,7 @@
     <ClCompile Include="src\MNet\MSocket\MSSLSocket.cpp" />
     <ClCompile Include="src\MTime.cpp" />
     <ClCompile Include="src\MTimer\MTimerManager.cpp" />
+    <ClCompile Include="src\MTool\MColor.cpp" />
     <ClCompile Include="src\MTool\MSharp.cpp" />
     <ClCompile Include="src\MTool\MUTF8.cpp" />
     <ClCompile Include="src\MTool\SimpleHeap.cpp" />

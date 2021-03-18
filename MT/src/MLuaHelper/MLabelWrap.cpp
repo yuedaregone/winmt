@@ -28,6 +28,19 @@ extern "C" {
 		return 0;
 	}
 
+	static int setcolor(lua_State* L)
+	{
+		MLable** label = (MLable**)luaL_checkudata(L, 1, "meta_label");
+		luaL_argcheck(L, label != NULL, 1, "invalid call. It should be MLable!");
+
+		int r = (int)luaL_checkinteger(L, 2);
+		int g = (int)luaL_checkinteger(L, 3);
+		int b = (int)luaL_checkinteger(L, 4);
+		int a = (int)luaL_checkinteger(L, 5);
+		(*label)->SetColor((unsigned char)r, (unsigned char)g, (unsigned char)b, (unsigned char)a);
+		return 0;
+	}
+
 	static int dellabel(lua_State* L)
 	{
 		MLable** label = (MLable**)luaL_checkudata(L, 1, "meta_label");
@@ -43,8 +56,9 @@ extern "C" {
 	};
 
 	static const luaL_Reg labelfunlib[] = {
-		{ "set", setcontent },
+		{ "content", setcontent },
 		{ "release", dellabel },
+		{ "color", setcolor },
 		{ NULL, NULL }
 	};
 

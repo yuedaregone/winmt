@@ -85,11 +85,9 @@ void MLable::ReleaseCharData(CharData * ch)
 
 void MLable::Draw()
 {
-	uint32_t color = 0xFF0000FF;
-
 	std::vector<CharData*>::iterator it = m_chData.begin();
 	for (int i = 0; it != m_chData.end(); ++it, ++i)
 	{
-		BlitGrayToColor((*it)->buffer, (*it)->w, (*it)->h, m_rect.left + i * (*it)->w, m_rect.top, color);
+		BlitGrayToColor((*it)->buffer, (*it)->w, (*it)->h, m_rect.left + i * (*it)->w, m_rect.top, m_color);
 	}
 }

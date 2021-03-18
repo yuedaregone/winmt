@@ -117,6 +117,7 @@
     <ClCompile Include="src\MLuaHelper\MComponentWrap.cpp" />
     <ClCompile Include="src\MGL\shader.cpp" />
     <ClCompile Include="src\External\stb_image.cpp" />
+    <ClCompile Include="src\MTool\MColor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MApplication.h">
