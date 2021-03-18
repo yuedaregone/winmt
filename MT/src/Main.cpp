@@ -74,10 +74,12 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	app.SetInterval(0.033f);
 	app.SetWaitMessageMode(false);
 	
+	/*
 	MLayer* l = new MGLLayer(hInstance, GetCenterRect(300, 300), "icon");
 	l->Create();
 	app.Add(l);
 	l->Show(0);
+	*/
 	
 	
 
