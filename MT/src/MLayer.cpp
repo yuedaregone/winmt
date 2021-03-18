@@ -167,6 +167,7 @@ void MLayer::OnMainLoop()
 {
 	//update
 	if (!m_updateManual) return;	
+	if (m_end) return;
 
 	Render();
 }

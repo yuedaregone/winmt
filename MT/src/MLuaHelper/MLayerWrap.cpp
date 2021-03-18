@@ -33,6 +33,16 @@ extern "C"
 		return 1;
 	}
 
+	static int deletelayer(lua_State* L) 
+	{
+		const char* name = luaL_checkstring(L, 1);
+		luaL_argcheck(L, name != NULL, 1, "invalid call. You should set name!");
+
+		MApplaction* app = MApplaction::GetCurrent();
+		app->Destroy(name);
+		return 0;
+	}
+
 	static int showlayer(lua_State* L)
 	{
 		MLayer** ml = (MLayer**)luaE_checkumetatable(L, 1, "meta_mlayer");
@@ -102,6 +112,7 @@ extern "C"
 
 	static const luaL_Reg layernewlib[] = {
 		{"new", newlayer},
+		{"del", deletelayer},
 		{ NULL, NULL }
 	};
 

@@ -1,4 +1,5 @@
 ----------------------------------------------schedule-------------------------------------------------
+--[[
 local schedule = {
 	intervals = {5, 10},
 	shows = {"Stop", "Continue"},
@@ -56,9 +57,11 @@ function schedule:stop()
 	self.tick = false
 	self:closewindow()
 end
+]]
 ----------------------------------------------schedule-end---------------------------------------------
 
 ----------------------------------------------dict-----------------------------------------------------
+--[[
 local bydict = {
 	http_client = nil,
 	command = "wget -q -O - %s",
@@ -69,22 +72,26 @@ local bydict = {
 function bydict:getreqcmd()
 	return string.format(self.command, self.req_url)
 end
---[[
-function bydict:start()
-	http_client = Http.new()
-	http_client:register(function(d, l)
-		self:onfetch(d, l)
-	end)
-	http_client:request(self.req_url)
-end
-]]
+
+--
+--function bydict:start()
+--	http_client = Http.new()
+--	http_client:register(function(d, l)
+--		self:onfetch(d, l)
+--	end)
+--	http_client:request(self.req_url)
+--end
+
 function bydict:onfetch(data, len)		
 	local dict_en = nil
 	local dict_zh = nil
+    
 	string.gsub(data, self.match_pattern, function(en,zh)
 		dict_en = en
 		dict_zh = zh
 	end)
+    
+    print(dict_en, dict_zh)
 	if dict_en ~= nil and dict_zh ~= nil then
 		print(dict_en, dict_zh)
 
@@ -106,11 +113,13 @@ function bydict:start()
 	pread:close()	
 	self:onfetch(content, string.len(content))
 end
+]]
 ----------------------------------------------dict-end-------------------------------------------------
 
 ----------------------------------------------relax----------------------------------------------------
+--[[
 local relax = {
-	interval = 5,
+	interval = 1800,
 	tick = false,
 	tm = 0,
 	layer = nil,
@@ -129,7 +138,7 @@ end
 
 function relax:showlayer()
 	if self.layer == nil then
-		self.layer = ML.new("relax", 0, 1080-90, 48, 48)
+		self.layer = ML.new("relax", 1920, 1080-90, 48, 48)
 		self.sprite = Sprite.new("x_happy.bin")
 		self.layer:add(self.sprite)
 	end
@@ -174,18 +183,84 @@ end
 function relax:stop()
 
 end
+]]
 ----------------------------------------------relax-end------------------------------------------------
 
 ----------------------------------------------main-----------------------------------------------------
+local oneword = {
+	font_size = 16,
+	last_time = 0,
+	need_start = false,
+	http_client = nil,
+	command = "wget -q -O - %s",
+	req_url = "\"https://v1.hitokoto.cn/?c=f&encode=text\"",
+	match_pattern = '<div class="client_daily_word_en"><.->(%w-)</a>.-<div class="client_daily_word_zh">(.-)</div>',
+}
+function oneword:getreqcmd()
+	return string.format(self.command, self.req_url)
+end
+
+function oneword:onfetch(data, len)	    
+    print(data)
+	if data ~= nil then	
+		local len = string.len(data)
+		local w = (len / 3 + 2) * self.font_size
+		local h = self.font_size * 2
+
+		local ml = ML.new("dict", 1920-w, 0, w, h)
+		ml:show()
+
+		local lb = Label.new(data, self.font_size)
+		ml:add(lb)
+	end	
+end
+
+function oneword:fetchword()
+	local cmd = self:getreqcmd()
+	local pread = io.popen(cmd)
+	local content = pread:read("*a")
+	pread:close()	
+	return content
+end
+
+function oneword:start()	
+	self.need_start = false
+	self.last_time = os.time()
+	local content = self:fetchword()
+	self:onfetch(content, string.len(content))
+end
+
+function oneword:restart()
+	print("next")
+	ML.del("dict")
+	self.need_start = true
+	self.last_time = os.time()
+end
+
+function oneword:update()
+	if self.need_start then
+		if os.time() - self.last_time > 5 then
+			self.last_time = os.time()
+			self:start()
+		end		
+	else 
+		if os.time() - self.last_time > 5 then
+			self.last_time = os.time()
+			self:restart()
+		end
+	end	
+end
+
+
 function Start()
 	print("Start")	
 	keyevent.start()	
-	relax:start()
-	relax:setkeylisten()
-	
+	--relax:start()
+	--relax:setkeylisten()	
 	--schedule:start()
-	bydict:start()	
+	--bydict:start()	
 	--relax:showtip()
+	oneword:start()	
 end
 
 function End()
@@ -197,8 +272,9 @@ end
 function Tick()	
 	--print(mtime.time())
 	--print("Tick")
-	schedule:update()
-	relax:update()
+	--schedule:update()
+	--relax:update()
+	oneword:update()
 end
 ----------------------------------------------main-end-------------------------------------------------
 

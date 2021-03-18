@@ -30,7 +30,8 @@ void MWindow::Show(int cmdShow)
 
 void MWindow::End()
 {
-	PostMessage(m_hwnd, WM_CLOSE, 0, 0);
+	m_end = true;
+	SendMessage(m_hwnd, WM_CLOSE, 0, 0);
 }
 
 std::string MWindow::GetName()
