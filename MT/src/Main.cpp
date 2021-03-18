@@ -16,6 +16,16 @@
 #include "time.h"
 #include <GL/glew.h>
 
+#ifdef _DEBUG
+#define CONSOLE_DEBUG
+#else
+#ifdef CONSOLE_DEBUG
+#undef CONSOLE_DEBUG
+#endif
+#endif // _DEBUG
+
+
+
 void SetAutoStart()
 {
 	HKEY key;
@@ -43,7 +53,6 @@ void SetEnv()
 	SetCurrentDirectory(buff);
 }
 
-#define CONSOLE_DEBUG
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	_In_opt_ HINSTANCE hPrevInstance,
 	_In_ LPWSTR    lpCmdLine,

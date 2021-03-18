@@ -14,6 +14,9 @@ void MLuaEngine::Init()
 	luaL_openlibs(L);	
 	m_L = L;
 
+	AddSearchPath("path", "./lua/?.lua;../lua/?.lua;");
+	//AddSearchPath("cpath", "");
+
 	luaopen_mall(L);
 
 	if (TryStartMainLua())
@@ -29,11 +32,33 @@ void MLuaEngine::OnMainLoop()
 	ExecuteCacheFunction("Tick");
 }
 
+static const char* GetMainLuaPath() 
+{
+	const char* mainLua = NULL;
+
+	const char* path = "main.lua";
+	if (IsFileExit(path))
+	{
+		mainLua = path;
+	}
+	path = "./lua/main.lua";
+	if (mainLua == NULL && IsFileExit(path))
+	{
+		mainLua = path;
+	}
+	path = "../lua/main.lua";
+	if (mainLua == NULL && IsFileExit(path))
+	{
+		mainLua = path;
+	}
+	return mainLua;
+}
+
 bool MLuaEngine::TryStartMainLua()
 {
-	std::string path = GetFullPath("main.lua");
-
-	if (luaL_loadfile(m_L, path.c_str()) || lua_pcall(m_L, 0, 0, 0))
+	const char* mainLua = GetMainLuaPath();
+	
+	if (luaL_loadfile(m_L, mainLua) || lua_pcall(m_L, 0, 0, 0))
 	{
 		printf("LUA ERROR:%s", lua_tostring(m_L, -1));
 		lua_close(m_L);
@@ -47,6 +72,20 @@ bool MLuaEngine::TryStartMainLua()
 void MLuaEngine::OnDestroy()
 {
 	ExecuteGlobalFunction("End");
+}
+
+void MLuaEngine::AddSearchPath(const char* name, const char* value)
+{
+	lua_getglobal(m_L, "package");
+	lua_getfield(m_L, -1, name);
+
+	std::string v;
+	v.append(lua_tostring(m_L, -1));
+	v.append(";");
+	v.append(value);
+	lua_pushstring(m_L, v.c_str());
+	lua_setfield(m_L, -3, name);
+	lua_pop(m_L, 2);
 }
 
 void MLuaEngine::ExecuteTableFunction(const char * tabName, const char * funName)

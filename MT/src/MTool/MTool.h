@@ -14,6 +14,7 @@ extern "C" {
 
 	uint32_t ConvertColor(unsigned char r, unsigned char g, unsigned char b, unsigned char a);
 
+	bool IsFileExit(const char* filename);
 
 	int unicode_len(const char chr);
 	int get_unicode(const char *str, int n);

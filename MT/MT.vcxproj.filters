@@ -118,6 +118,7 @@
     <ClCompile Include="src\MGL\shader.cpp" />
     <ClCompile Include="src\External\stb_image.cpp" />
     <ClCompile Include="src\MTool\MColor.cpp" />
+    <ClCompile Include="src\MTool\MFileSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MApplication.h">

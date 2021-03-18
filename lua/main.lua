@@ -211,6 +211,7 @@ function oneword:onfetch(data, len)
 		ml:show()
 
 		local lb = Label.new(data, self.font_size)
+		lb:color(0,64,32,255)
 		ml:add(lb)
 	end	
 end

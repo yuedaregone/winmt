@@ -18,6 +18,7 @@ private:
 	void OnDestroy();
 
 public:
+	void AddSearchPath(const char* name, const char* value);
 	void ExecuteTableFunction(const char* tabName, const char* funName);
 	void ExecuteGlobalFunction(const char* funName);
 	void ExecuteGlobalFunction(const char* funName, int argc, ...);	
