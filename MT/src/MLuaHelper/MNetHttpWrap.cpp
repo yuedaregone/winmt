@@ -2,6 +2,7 @@
 #include "MHttpClient.h"
 #include "MLuaEngine.h"
 #include "MHttpResponse.h"
+#include "MHttpTools.h"
 
 class MHttpClientLuaWrap : public MHttpClient
 {
@@ -59,6 +60,14 @@ extern "C" {
 		return 1;
 	}
 
+	static int gethttp(lua_State* L)
+	{
+		const char* url = luaL_checkstring(L, 1);
+		std::string result = MHttpTools::RequestHttpGet(url);
+		lua_pushlstring(L, result.c_str(), result.length());
+		return 1;
+	}
+
 	static int reghttp(lua_State* L)
 	{
 		int n = lua_gettop(L);
@@ -104,6 +113,7 @@ extern "C" {
 
 	static const luaL_Reg httpnewlib[] = {
 		{ "new", newclient },
+		{ "get", gethttp},
 		{ NULL, NULL }
 	};
 

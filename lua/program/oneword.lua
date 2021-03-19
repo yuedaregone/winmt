@@ -1,14 +1,11 @@
+local http = require("tools/http")
 local oneword = {
 	font_size = 12,
 	last_time = 0,
 	need_start = false,
-	http_client = nil,
-	command = "wget -q -O - %s",
+	
 	req_url = "https://v1.hitokoto.cn/?c=f&encode=text",
 }
-function oneword:getreqcmd()
-	return string.format(self.command, self.req_url)
-end
 
 function oneword:onfetch(data, len)	    
     print(data)
@@ -26,32 +23,13 @@ function oneword:onfetch(data, len)
 	end	
 end
 
-function oneword:fetchword()
-	local cmd = self:getreqcmd()
-	local pread = io.popen(cmd)
-	local content = pread:read("*a")
-	pread:close()	
-	return content
-end
-
 function oneword:start()	
 	self.need_start = false
 	self.last_time = os.time()
 
-	local content = self:fetchword()
+	local content = http:get(self.req_url)
 	self:onfetch(content, string.len(content))
 end
---[[
-function oneword:start() 
-    if self.http_client == nil then
-        self.http_client = Http.new()
-        self.http_client:register(function(d, l)
-            self:onfetch(d, l)
-        end)
-    end
-    self.http_client:request(self.req_url)
-end
-]]
 
 function oneword:restart()
 	print("next")

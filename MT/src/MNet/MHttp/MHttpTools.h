@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 namespace MHttpTools {
-	std::string GetHttp(const char* url);
+	std::string RequestHttpGet(const char* url);
 
 };
 

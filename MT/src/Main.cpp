@@ -24,6 +24,8 @@
 #endif
 #endif // _DEBUG
 
+#include "MHttpTools.h"
+
 void SetAutoStart()
 {
 	HKEY key;
@@ -59,7 +61,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);	
 
-	
+	//MHttpTools::RequestHttpGet("https://v1.hitokoto.cn/?c=f&encode=text");
 	//Img_emt_hp i;
 	
 	//MLayer* l = new MLayer(hInstance, GetRightBottomRect(300, 300), "icon");
@@ -87,7 +89,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	app.Add(l);
 	l->Show(0);
 	*/
-	
 	
 
 	g_mLuaEngine->Init();
