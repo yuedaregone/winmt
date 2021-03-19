@@ -3,6 +3,38 @@
 #include "MTool.h"
 #include <string>
 
+static const char* search_list[] = {
+	"./lua/",
+	"../lua/",
+	NULL
+};
+
+static std::string GetSearchPath(const char* filename)
+{
+	if (IsFileExit(filename)) 
+	{
+		return filename;
+	}
+
+	std::string path;
+
+	int i = 0;
+	const char* search = NULL;
+	while ((search = search_list[i++]) != NULL)
+	{
+		path.clear();
+		path.append(search);
+		path.append(filename);
+
+		if (IsFileExit(path.c_str())) {
+			return path;
+		}
+	}
+
+	path.clear();
+	return path;
+}
+
 MLuaEngine::MLuaEngine()
 	: m_L(NULL)
 {
@@ -32,33 +64,11 @@ void MLuaEngine::OnMainLoop()
 	ExecuteCacheFunction("Tick");
 }
 
-static const char* GetMainLuaPath() 
-{
-	const char* mainLua = NULL;
-
-	const char* path = "main.lua";
-	if (IsFileExit(path))
-	{
-		mainLua = path;
-	}
-	path = "./lua/main.lua";
-	if (mainLua == NULL && IsFileExit(path))
-	{
-		mainLua = path;
-	}
-	path = "../lua/main.lua";
-	if (mainLua == NULL && IsFileExit(path))
-	{
-		mainLua = path;
-	}
-	return mainLua;
-}
-
 bool MLuaEngine::TryStartMainLua()
 {
-	const char* mainLua = GetMainLuaPath();
+	std::string mainLua = GetSearchPath("main.lua");
 	
-	if (luaL_loadfile(m_L, mainLua) || lua_pcall(m_L, 0, 0, 0))
+	if (luaL_loadfile(m_L, mainLua.c_str()) || lua_pcall(m_L, 0, 0, 0))
 	{
 		printf("LUA ERROR:%s", lua_tostring(m_L, -1));
 		lua_close(m_L);
