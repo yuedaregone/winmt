@@ -24,8 +24,6 @@
 #endif
 #endif // _DEBUG
 
-
-
 void SetAutoStart()
 {
 	HKEY key;

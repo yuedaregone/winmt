@@ -44,6 +44,7 @@
     <ClCompile Include="src\MNet\MHttp\MHttpClient.cpp" />
     <ClCompile Include="src\MNet\MHttp\MHttpRequest.cpp" />
     <ClCompile Include="src\MNet\MHttp\MHttpResponse.cpp" />
+    <ClCompile Include="src\MNet\MHttp\MHttpTools.cpp" />
     <ClCompile Include="src\MNet\MSocket\MNetApi.cpp" />
     <ClCompile Include="src\MNet\MSocket\MNetClient.cpp" />
     <ClCompile Include="src\MNet\MSocket\MNetServer.cpp" />
@@ -88,6 +89,7 @@
     <ClInclude Include="src\MNet\MHttp\MHttpClient.h" />
     <ClInclude Include="src\MNet\MHttp\MHttpRequest.h" />
     <ClInclude Include="src\MNet\MHttp\MHttpResponse.h" />
+    <ClInclude Include="src\MNet\MHttp\MHttpTools.h" />
     <ClInclude Include="src\MNet\MSocket\MNetApi.h" />
     <ClInclude Include="src\MNet\MSocket\MNetClient.h" />
     <ClInclude Include="src\MNet\MSocket\MNetDef.h" />

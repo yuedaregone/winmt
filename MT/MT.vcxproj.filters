@@ -119,6 +119,7 @@
     <ClCompile Include="src\External\stb_image.cpp" />
     <ClCompile Include="src\MTool\MColor.cpp" />
     <ClCompile Include="src\MTool\MFileSystem.cpp" />
+    <ClCompile Include="src\MNet\MHttp\MHttpTools.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MApplication.h">
@@ -225,6 +226,7 @@
     <ClInclude Include="src\MComponent\MComponent.h" />
     <ClInclude Include="src\MDraw\MDrawProtocol.h" />
     <ClInclude Include="src\MGL\shader.h" />
+    <ClInclude Include="src\MNet\MHttp\MHttpTools.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MT.rc">
