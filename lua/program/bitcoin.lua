@@ -19,7 +19,7 @@ function bitcoin:onfetch(data, len)
 		local w = (len + 2) * self.font_size
 		local h = self.font_size * 2
 
-		local ml = ML.new("coin", 1920 + 2048 - w, 1152-h, w, h)
+		local ml = ML.new("coin", 1920 + 2048 - w - w / 2, 1152-h - 20, w, h)
 		ml:show()
 
 		local lb = Label.new(data, self.font_size)
@@ -40,6 +40,10 @@ function bitcoin:restart()
 	ML.del("coin")
 	self.need_start = true
 	self.last_time = os.time()
+end
+
+function bitcoin:refresh()
+	self:restart()
 end
 
 function bitcoin:update()

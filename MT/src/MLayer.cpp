@@ -20,6 +20,7 @@ MLayer::MLayer(HINSTANCE instance, RECT rect, const char* name)
 
 void MLayer::Show(int cmdShow)
 {
+	SetWindowPos(m_hwnd, HWND_TOPMOST, m_rect.left, m_rect.top, GetWidth(), GetHeight(), 0);
 	UpdateLayer();
 }
 

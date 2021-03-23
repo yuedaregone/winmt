@@ -14,7 +14,7 @@ function oneword:onfetch(data, len)
 		local w = (len / 3 + 2) * self.font_size
 		local h = self.font_size * 2
 
-		local ml = ML.new("dict", 1920, 1152 - h, w, h)
+		local ml = ML.new("dict", 1920 + 20, 1152 - h, w, h)
 		ml:show()
 
 		local lb = Label.new(data, self.font_size)
