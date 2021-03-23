@@ -1,7 +1,9 @@
 local programs = {}
 
 local oneword = require("program/oneword")
+local bitcoin = require("program/bitcoin")
 table.insert(programs, oneword)
+table.insert(programs, bitcoin)
 
 function programs:start()
 	for _, v in ipairs(programs) do
