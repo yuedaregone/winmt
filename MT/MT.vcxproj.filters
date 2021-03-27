@@ -120,6 +120,7 @@
     <ClCompile Include="src\MTool\MColor.cpp" />
     <ClCompile Include="src\MTool\MFileSystem.cpp" />
     <ClCompile Include="src\MNet\MHttp\MHttpTools.cpp" />
+    <ClCompile Include="src\MLuaHelper\MWin32Wrap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MApplication.h">

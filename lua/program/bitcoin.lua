@@ -18,8 +18,21 @@ function bitcoin:onfetch(data, len)
 		local len = string.len(data)
 		local w = (len + 2) * self.font_size
 		local h = self.font_size * 2
+		local x = 0
+		local y = 0
+		
+		if win.screencount() == 1 then
+			local l,r,t,b = win.creenrect(0)		
+			x = r - l - w - w / 2
+			y = b - t - h - 30
+		else
+			local l1,r1,t1,b1 = win.creenrect(0)
+			local l2,r2,t2,b2 = win.creenrect(1)
+			x = r1 + r2 - l2 - w - w / 2
+			y = b2 - t2 - h - 10
+		end	
 
-		local ml = ML.new("coin", 1920 + 2048 - w - w / 2, 1152-h - 20, w, h)
+		local ml = ML.new("coin", x, y, w, h)
 		ml:show()
 
 		local lb = Label.new(data, self.font_size)

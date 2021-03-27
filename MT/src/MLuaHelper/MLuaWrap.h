@@ -8,6 +8,7 @@ extern "C" {
 	int luaopen_http(lua_State *L);
 	int luaopen_mlabel(lua_State *L);
 	int luaopen_msprite(lua_State *L);
+	int luaopen_win(lua_State *L);
 
 	int luaopen_mdraw(lua_State *L);
 	int luaopen_mcomp(lua_State *L);
@@ -19,7 +20,7 @@ extern "C" {
 		luaopen_mwindow(L);
 		luaopen_layer(L);
 		luaopen_http(L);
-
+		luaopen_win(L);
 
 		luaopen_mdraw(L);
 		luaopen_mcomp(L);

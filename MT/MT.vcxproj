@@ -40,6 +40,7 @@
     <ClCompile Include="src\MLuaHelper\MNetHttpWrap.cpp" />
     <ClCompile Include="src\MLuaHelper\MSpriteWrap.cpp" />
     <ClCompile Include="src\MLuaHelper\MTimeLuaWrap.cpp" />
+    <ClCompile Include="src\MLuaHelper\MWin32Wrap.cpp" />
     <ClCompile Include="src\MLuaHelper\MWindowWrap.cpp" />
     <ClCompile Include="src\MNet\MHttp\MHttpClient.cpp" />
     <ClCompile Include="src\MNet\MHttp\MHttpRequest.cpp" />
